@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = 'UXFeedbackSDK'
-  spec.version      = '0.2.1'
+  spec.version      = '0.2.2'
   spec.summary      = 'UXFeedbackSDK iOS framework.'
 
   spec.homepage     = 'https://uxfeedback.ru'
