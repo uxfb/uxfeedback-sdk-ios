@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		XU8FiRBhHex8qOMoboSufXr68ys=
+		KnudZkyJ/h+B5ASgmpr9fpjX6rQ=
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/arm.swiftdoc</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/arm.swiftmodule</key>
 		<data>
-		CSQX2tzWNw/M/e/HbeyEjEFvoCE=
+		uWpv4VCVX4h9uixQJomE1w92MHI=
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		+6f6Iilk8ZKgUsl7lf9DaxjUXgo=
+		CzEwMs6lhNATY6FWc/6IVdibUdg=
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/armv7.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		CSQX2tzWNw/M/e/HbeyEjEFvoCE=
+		uWpv4VCVX4h9uixQJomE1w92MHI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>UXFViewController.nib/objects-11.0+.nib</key>
 		<data>
-		xJJ14S0RgWu7Fc3yyWCO0sJ1JcM=
+		zGQCVg/LHfVsMbDZpwyqfi/vmAk=
 		</data>
 		<key>UXFViewController.nib/runtime.nib</key>
 		<data>
-		7DgIAIEBULc9nuJi2d5Lj0r76Pw=
+		QsZCPZLOLBxq3vv/BcmKmsEFDsw=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -119,11 +119,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CSQX2tzWNw/M/e/HbeyEjEFvoCE=
+			uWpv4VCVX4h9uixQJomE1w92MHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			TOvz3892SGPTCcIsMNThAe62uoZ1GSzhF8NWC7ljHxg=
+			1LzzOCmKgUCLk3g0l1Tld6KYlSy/lPCH3EJjNe86vzo=
 			</data>
 		</dict>
 		<key>Modules/UXFeedbackSDK.swiftmodule/arm64.swiftdoc</key>
@@ -141,11 +141,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+6f6Iilk8ZKgUsl7lf9DaxjUXgo=
+			CzEwMs6lhNATY6FWc/6IVdibUdg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wod6/MfxkVGyIrGqxRPlLiT27xp2+GI/SvRmCNttTuU=
+			rTAQ6G7irAJ8GGGVqvuILt9YYq7O3FXfyegmaDx8gjE=
 			</data>
 		</dict>
 		<key>Modules/UXFeedbackSDK.swiftmodule/armv7.swiftdoc</key>
@@ -163,11 +163,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CSQX2tzWNw/M/e/HbeyEjEFvoCE=
+			uWpv4VCVX4h9uixQJomE1w92MHI=
 			</data>
 			<key>hash2</key>
 			<data>
-			TOvz3892SGPTCcIsMNThAe62uoZ1GSzhF8NWC7ljHxg=
+			1LzzOCmKgUCLk3g0l1Tld6KYlSy/lPCH3EJjNe86vzo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -218,22 +218,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			xJJ14S0RgWu7Fc3yyWCO0sJ1JcM=
+			zGQCVg/LHfVsMbDZpwyqfi/vmAk=
 			</data>
 			<key>hash2</key>
 			<data>
-			ZYsB5A4bC/v333774PDH383zDmTB2AnmBxJKn/Oa520=
+			/N/FopoDf4aD5BXqcAmCa4FTnBTbBSgu666ZoHGiZUU=
 			</data>
 		</dict>
 		<key>UXFViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			7DgIAIEBULc9nuJi2d5Lj0r76Pw=
+			QsZCPZLOLBxq3vv/BcmKmsEFDsw=
 			</data>
 			<key>hash2</key>
 			<data>
-			p2UK4BoBbXC3eYO2WukJV8dcs+jow4xDpWAlqbAB1hI=
+			81Chmgjfpd9jx8YinDIIlzu8lCwM4RwZV7o4HHvNQnU=
 			</data>
 		</dict>
 	</dict>
