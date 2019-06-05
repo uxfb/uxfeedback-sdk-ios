@@ -1,20 +1,22 @@
-Pod::Spec.new do |spec|
+Pod::Spec.new do |s|
+  s.name = 'UXFeedbackSDK'
+  s.version = '5.0.0-beta.6'
+  s.license = 'MIT'
+  s.summary = 'Elegant HTTP Networking in Swift'
+  s.homepage = 'https://github.com/Alamofire/Alamofire'
+  s.social_media_url = 'http://twitter.com/AlamofireSF'
+  s.authors = { 'Alamofire Software Foundation' => 'info@alamofire.org' }
+  s.source = { :git => 'https://github.com/Alamofire/Alamofire.git', :tag => s.version }
+  s.documentation_url = 'https://alamofire.github.io/Alamofire/'
 
-  spec.name         = 'UXFeedbackSDK'
-  spec.version      = '0.2.3'
-  spec.summary      = 'UXFeedbackSDK iOS framework.'
+  s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.12'
+  s.tvos.deployment_target = '10.0'
+  s.watchos.deployment_target = '3.0'
 
-  spec.homepage     = 'https://uxfeedback.ru'
-  spec.license      = 'MIT'
-  spec.author       = { 'Dmitry Kudryavtsev' => 'rockerman-83@ya.ru' }
-  #spec.platform     = :ios, '10.0'
-  spec.ios.deployment_target = '10.0'
-  spec.source       = { :git => 'https://github.com/uxfb/uxfeedback-sdk-ios.git', :tag => spec.version }
+  s.swift_version = '5.0'
 
-  spec.framework = 'UIKit'
-  spec.requires_arc = true
-  spec.dependency 'Nuke'
-  spec.dependency 'Reachability'
-  spec.dependency 'Alamofire', '~> 4.8'
-  spec.swift_version = '4.2'
+  s.source_files = 'Source/*.swift'
+
+  s.frameworks = 'CFNetwork'
 end
