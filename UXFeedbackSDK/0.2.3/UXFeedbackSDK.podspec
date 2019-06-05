@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "UXFeedbackSDK"
-  s.version       = "0.2.3"
+  s.version       = '0.2.3'
   s.summary       = "Collect feedback from your users"
   s.description   = 'With UXFeedbackSDK you can collect feedback from your users'
   s.homepage      = "https://uxfeedback.ru"
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.author        = { "Team SDK" => "info@uxfeedback.ru" }
   s.platform      = :ios, "10.0"
   s.swift_version = "4.2"
-  s.source        = { :git => "https://github.com/uxfb/uxfeedback-sdk-ios.git", :tag => 'v0.2.3' }
+s.source        = { :git => 'https://github.com/uxfb/uxfeedback-sdk-ios.git', :tag => 'v0.2.3' }
   s.ios.vendored_frameworks = 'UXFeedbackSDK.framework'
   s.frameworks = "Foundation", "UIKit"
 end
