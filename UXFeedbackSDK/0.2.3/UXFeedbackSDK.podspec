@@ -11,5 +11,4 @@ Pod::Spec.new do |s|
   s.swift_version = "4.2"
   s.source        = { :git => "https://github.com/uxfb/uxfeedback-sdk-ios.git" }
   s.ios.vendored_frameworks = 'UXFeedbackSDK.framework'
-
 end
