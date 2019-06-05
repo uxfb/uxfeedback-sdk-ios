@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.author       = { 'Dmitry Kudryavtsev' => 'rockerman-83@ya.ru' }
   #spec.platform     = :ios, '10.0'
   spec.ios.deployment_target = '10.0'
-  spec.source       = { :git => 'https://github.com/uxfb/uxfeedback-sdk-ios.git', :tag => s.version }
+  spec.source       = { :git => 'https://github.com/uxfb/uxfeedback-sdk-ios.git', :tag => spec.version }
 
   spec.framework = 'UIKit'
   spec.requires_arc = true
