@@ -1,19 +1,15 @@
-Pod::Spec.new do |spec|
-spec.name         = 'UXFeedbackSDK'
-spec.version      = '0.2.3'
-spec.summary      = 'UXFeedbackSDK iOS framework.'
+Pod::Spec.new do |s|
 
-spec.homepage     = 'https://uxfeedback.ru'
-spec.license      = { :type => 'MIT', :file => 'uxfeedback-sdk-ios/LICENSE' }
-spec.author       = { 'Dmitry Kudryavtsev' => 'rockerman-83@ya.ru' }
-spec.ios.deployment_target = '10.0'
-spec.source       = { :git => 'https://github.com/uxfb/uxfeedback-sdk-ios.git', :tag => spec.version }
+  s.name          = "UXFeedbackSDK"
+  s.version       = "0.2.3"
+  s.summary       = "Collect feedback from your users"
+  s.description   = 'With UXFeedbackSDK you can collect feedback from your users'
+  s.homepage      = "https://uxfeedback.ru"
+  s.license       = "Apache License, Version 2.0"
+  s.author        = { "Team SDK" => "info@uxfeedback.ru" }
+  s.platform      = :ios, "10.0"
+  s.swift_version = "4.2"
+  s.source        = { :git => "https://github.com/uxfb/uxfeedback-sdk-ios.git", :tag => "v#{s.version}" }
+  s.ios.vendored_frameworks = 'UXFeedbackSDK.framework'
 
-#spec.source_files = 'Source/*.swift'
-spec.frameworks = 'Foundation', 'UIKit'
-spec.requires_arc = true
-spec.dependency 'Nuke'
-spec.dependency 'Reachability'
-spec.dependency 'Alamofire', '~> 4.8'
-spec.swift_version = '4.2'
 end
