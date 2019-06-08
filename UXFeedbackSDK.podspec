@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   tagName = "v0.2.3"
   s.source        = { :git => "https://github.com/uxfb/uxfeedback-sdk-ios.git", :tag => tagName }
   s.ios.vendored_frameworks = 'UXFeedbackSDK.framework'
-  s.frameworks = "Foundation", "UIKit"
+  s.frameworks = "Foundation", "UIKit", "SystemConfiguration", "CoreTelephony"
   s.dependency "Alamofire", "~> 4.8"
   s.dependency "Nuke"
   s.dependency "Reachability"
