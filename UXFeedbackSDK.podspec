@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.ios.vendored_frameworks = 'UXFeedbackSDK.framework'
   s.frameworks = "Foundation", "UIKit", "SystemConfiguration", "CoreTelephony"
   s.dependency "Alamofire", "~> 4.8"
-  s.dependency "Nuke"
+  s.dependency "Nuke", "~> 7.6.3"
 end
