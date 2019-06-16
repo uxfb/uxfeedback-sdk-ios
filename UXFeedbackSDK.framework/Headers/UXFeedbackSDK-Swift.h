@@ -246,6 +246,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+
 @class NSBundle;
 @class NSCoder;
 
@@ -495,6 +497,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 ///
 - (NSString * _Nonnull)hexString:(BOOL)includeAlpha SWIFT_WARN_UNUSED_RESULT;
 @end
+
+
 
 
 
