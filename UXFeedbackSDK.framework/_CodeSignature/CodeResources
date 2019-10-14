@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		m0alcWYDvgc0uclaVupCZ/26rC8=
+		qlU/iS0G4A/QGaGFgUzwjkJZoA0=
 		</data>
 		<key>Headers/UXFeedbackSDK-Swift.h</key>
 		<data>
@@ -78,15 +78,15 @@
 		</data>
 		<key>UXFViewController.nib/objects-11.0+.nib</key>
 		<data>
-		ozE80mvffqDVBarIxySDeBqpeZE=
+		hPNHjiNj0YVGSrfn4kaEUhWUlT8=
 		</data>
 		<key>UXFViewController.nib/objects-13.0+.nib</key>
 		<data>
-		bblz5MQx2jERJn2bqOzanVxrk0Q=
+		xwLGP7nySPbaugqej/B6ZeTQUjY=
 		</data>
 		<key>UXFViewController.nib/runtime.nib</key>
 		<data>
-		XvENABF50IjsfhplVa36K6AOSHU=
+		6YwzjBfL0x9cUSGXRS/EckFeQpM=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -95,11 +95,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			m0alcWYDvgc0uclaVupCZ/26rC8=
+			qlU/iS0G4A/QGaGFgUzwjkJZoA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			8bcNpxnt+Gxa6WVA+Uk9v/VfYzkDKfqu9yzesYGacw8=
+			MFvY8FBHrGunPVSZIBkLFEgrHiv+oXFAoJfpavhTx6U=
 			</data>
 		</dict>
 		<key>Headers/UXFeedbackSDK-Swift.h</key>
@@ -282,33 +282,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ozE80mvffqDVBarIxySDeBqpeZE=
+			hPNHjiNj0YVGSrfn4kaEUhWUlT8=
 			</data>
 			<key>hash2</key>
 			<data>
-			myXFOt2cIif249QQGz9KGw6Vsppr0KZj1+d6gLnm6e0=
+			o/Yk/z6Wu5lBJ8ODlTMVO+vyQqs6bNReKCv3PLilcxw=
 			</data>
 		</dict>
 		<key>UXFViewController.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			bblz5MQx2jERJn2bqOzanVxrk0Q=
+			xwLGP7nySPbaugqej/B6ZeTQUjY=
 			</data>
 			<key>hash2</key>
 			<data>
-			G2gKQoZmD1BSeqp4Phn8D7Ld1NdsvoBEsPAlk9vXefs=
+			wgaeQSoUVjqGe2Y4hpgM6L4PjKpScXiH/kHIu08Qr2o=
 			</data>
 		</dict>
 		<key>UXFViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			XvENABF50IjsfhplVa36K6AOSHU=
+			6YwzjBfL0x9cUSGXRS/EckFeQpM=
 			</data>
 			<key>hash2</key>
 			<data>
-			VEpJslAd1u7tFV7m49k5WJFcJ5f2SQIq6jX+HaSLQ9w=
+			YRLJxIigoUFxcCww5Uk9fQoD78o7WS7dPXEI+lGxAOM=
 			</data>
 		</dict>
 	</dict>
