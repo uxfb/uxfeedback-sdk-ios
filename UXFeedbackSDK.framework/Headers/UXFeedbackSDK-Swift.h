@@ -308,6 +308,7 @@ SWIFT_CLASS("_TtC13UXFeedbackSDK17UXFViewController")
 @protocol UXFeedbackCampaignDelegate;
 @protocol UXFeedbackFormDelegate;
 @class UIWindowScene;
+@class UIWindow;
 
 SWIFT_CLASS("_TtC13UXFeedbackSDK10UXFeedback")
 @interface UXFeedback : NSObject
@@ -327,6 +328,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setThemeWithTheme:(UXFTheme * _Nonnull)theme;
 - (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
 - (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)loadFeedbackFormWithFormID:(NSString * _Nonnull)formID;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
@@ -673,6 +675,7 @@ SWIFT_CLASS("_TtC13UXFeedbackSDK17UXFViewController")
 @protocol UXFeedbackCampaignDelegate;
 @protocol UXFeedbackFormDelegate;
 @class UIWindowScene;
+@class UIWindow;
 
 SWIFT_CLASS("_TtC13UXFeedbackSDK10UXFeedback")
 @interface UXFeedback : NSObject
@@ -692,6 +695,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setThemeWithTheme:(UXFTheme * _Nonnull)theme;
 - (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
 - (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)loadFeedbackFormWithFormID:(NSString * _Nonnull)formID;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
@@ -1041,6 +1045,7 @@ SWIFT_CLASS("_TtC13UXFeedbackSDK17UXFViewController")
 @protocol UXFeedbackCampaignDelegate;
 @protocol UXFeedbackFormDelegate;
 @class UIWindowScene;
+@class UIWindow;
 
 SWIFT_CLASS("_TtC13UXFeedbackSDK10UXFeedback")
 @interface UXFeedback : NSObject
@@ -1060,6 +1065,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setThemeWithTheme:(UXFTheme * _Nonnull)theme;
 - (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
 - (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)loadFeedbackFormWithFormID:(NSString * _Nonnull)formID;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
@@ -1406,6 +1412,7 @@ SWIFT_CLASS("_TtC13UXFeedbackSDK17UXFViewController")
 @protocol UXFeedbackCampaignDelegate;
 @protocol UXFeedbackFormDelegate;
 @class UIWindowScene;
+@class UIWindow;
 
 SWIFT_CLASS("_TtC13UXFeedbackSDK10UXFeedback")
 @interface UXFeedback : NSObject
@@ -1425,6 +1432,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setThemeWithTheme:(UXFTheme * _Nonnull)theme;
 - (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
 - (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)loadFeedbackFormWithFormID:(NSString * _Nonnull)formID;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
