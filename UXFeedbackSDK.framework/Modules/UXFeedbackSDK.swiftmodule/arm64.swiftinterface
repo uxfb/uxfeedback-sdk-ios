@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-compiler-version: Apple Swift version 5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UXFeedbackSDK
 import Alamofire
 import CoreTelephony
@@ -60,9 +60,21 @@ public class LinkedList<T> {
   @objc open var inputTextColor: UIKit.UIColor
   @objc open var controlColor: UIKit.UIColor
   @objc open var backgroundColor: UIKit.UIColor
-  @objc open var fontRegularName: Swift.String
-  @objc open var fontMediumName: Swift.String
-  @objc open var fontBoldName: Swift.String
+  @objc open var regularFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc open func regularFont(size: CoreGraphics.CGFloat) -> UIKit.UIFont
+  @objc open var mediumFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc open func mediumFont(size: CoreGraphics.CGFloat) -> UIKit.UIFont
+  @objc open var boldFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc open func boldFont(size: CoreGraphics.CGFloat) -> UIKit.UIFont
   required public init(from decoder: Swift.Decoder) throws
   @objc override dynamic public init()
   @objc open func getSmile(imageName: Swift.String, completion: (UIKit.UIImage) -> ()) -> (UIKit.UIImage?)
