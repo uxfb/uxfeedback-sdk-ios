@@ -1,0 +1,220 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UXFeedbackSDK
+import CoreTelephony
+import Foundation
+import Foundation.NSURLRequest
+import QuartzCore
+import Swift
+import SystemConfiguration
+import UIKit
+@_exported import UXFeedbackSDK
+@objc @_inheritsConvenienceInitializers open class UXFViewController : UIKit.UIViewController {
+  @objc override dynamic open func viewDidLoad()
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
+  @objc deinit
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc required dynamic public init?(coder: Foundation.NSCoder)
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class UXFeedbackResult : ObjectiveC.NSObject {
+  public var rating: Swift.Int?
+  public var abandonedPageIndex: Swift.Int?
+  @objc public var sent: Swift.Bool
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public protocol UXFeedbackCampaignDelegate : AnyObject {
+  @objc func campaignDidClose(withFeedbackResult result: UXFeedbackSDK.UXFeedbackResult, isRedirectToAppStoreEnabled: Swift.Bool)
+  @objc func campaignLoaded(success: Swift.Bool)
+  @objc func campaignErrorReceived(errorString: Swift.String)
+}
+@objc public protocol UXFeedbackFormDelegate : AnyObject {
+  @objc func formDidLoaded(form: UXFeedbackSDK.UXFViewController)
+  @objc func formDidFailLoading(error: UXFeedbackSDK.UXFError)
+  @objc func formDidClose(formID: Swift.String?, withFeedbackResults results: [UXFeedbackSDK.UXFeedbackResult], isRedirectToAppStoreEnabled: Swift.Bool)
+  @objc func formWillClose(form: UXFeedbackSDK.UXFViewController, formID: Swift.String?, withFeedbackResults results: [UXFeedbackSDK.UXFeedbackResult], isRedirectToAppStoreEnabled: Swift.Bool)
+}
+extension String {
+  public var argb2rgba: Swift.String? {
+    get
+  }
+}
+public class LinkedList<T> {
+  public init(data: T)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Queue<T> {
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers open class UXFTheme : ObjectiveC.NSObject, Swift.Decodable {
+  @objc open var titleColor: UIKit.UIColor
+  @objc open var errorColor: UIKit.UIColor
+  @objc open var progressColor: UIKit.UIColor
+  @objc open var formRadius: CoreGraphics.CGFloat
+  @objc open var textColor: UIKit.UIColor
+  @objc open var inputBackgroundColor: UIKit.UIColor
+  @objc open var inputTextColor: UIKit.UIColor
+  @objc open var controlColor: UIKit.UIColor
+  @objc open var backgroundColor: UIKit.UIColor
+  @objc open var regularFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc open func regularFont(size: CoreGraphics.CGFloat) -> UIKit.UIFont
+  @objc open var mediumFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc open func mediumFont(size: CoreGraphics.CGFloat) -> UIKit.UIFont
+  @objc open var boldFont: UIKit.UIFont {
+    @objc get
+    @objc set
+  }
+  @objc open func boldFont(size: CoreGraphics.CGFloat) -> UIKit.UIFont
+  required public init(from decoder: Swift.Decoder) throws
+  @objc override dynamic public init()
+  @objc open func getSmile(imageName: Swift.String, completion: (UIKit.UIImage) -> ()) -> (UIKit.UIImage?)
+  @objc open func smileImageName(by index: Swift.Int) -> (Swift.String)
+  @objc open func loadFont(fontUrl: Foundation.URL) -> Swift.Bool
+  @objc deinit
+}
+@objc extension UIColor {
+  @objc convenience dynamic public init(hex3: Swift.UInt16, alpha: CoreGraphics.CGFloat = 1)
+  @objc convenience dynamic public init(hex4: Swift.UInt16)
+  @objc convenience dynamic public init(hex6: Swift.UInt32, alpha: CoreGraphics.CGFloat = 1)
+  @objc convenience dynamic public init(hex8: Swift.UInt32)
+  @objc convenience dynamic public init(rgba_throws rgba: Swift.String) throws
+  @objc convenience dynamic public init(_ rgba: Swift.String, defaultColor: UIKit.UIColor = UIColor.clear)
+  @objc dynamic public func hexStringThrows(_ includeAlpha: Swift.Bool = true) throws -> Swift.String
+  @objc dynamic public func hexString(_ includeAlpha: Swift.Bool = true) -> Swift.String
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers public class UXFError : Foundation.NSError {
+  @objc override dynamic public init(domain: Swift.String, code: Swift.Int, userInfo dict: [Swift.String : Any]? = nil)
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objcMembers open class UXFeedback : ObjectiveC.NSObject {
+  @objc public static let sharedInstance: UXFeedbackSDK.UXFeedback
+  @objc open var delegate: UXFeedbackSDK.UXFeedbackCampaignDelegate?
+  @objc open var formDelegate: UXFeedbackSDK.UXFeedbackFormDelegate?
+  @objc open var debugEnabled: Swift.Bool
+  @objc open var animationEnabled: Swift.Bool
+  @objc open var canDisplayCampaings: Swift.Bool
+  @objc open var isCampaignsLoaded: Swift.Bool {
+    @objc get
+  }
+  @objc public static var isStage: Swift.Bool {
+    @objc get
+  }
+  @objc open var currentForm: UXFeedbackSDK.UXFViewController? {
+    @objc get
+  }
+  @objc open func setTheme(theme: UXFeedbackSDK.UXFTheme)
+  @objc @available(iOS 13.0, *)
+  open func setup(appID: Swift.String, windowScene: UIKit.UIWindowScene, theme: UXFeedbackSDK.UXFTheme? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc open func setup(appID: Swift.String, theme: UXFeedbackSDK.UXFTheme? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc open func setup(appID: Swift.String, window: UIKit.UIWindow?, theme: UXFeedbackSDK.UXFTheme? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
+  @objc open func sendEvent(event: Swift.String, fromController: UIKit.UIViewController? = nil)
+  @objc open func loadFeedbackForm(formID: Swift.String)
+  @objc open func resetAllCampaignsData(completion: (() -> ())?)
+  @objc deinit
+}
+public enum UIColorInputError : Swift.Error {
+  case missingHashMarkAsPrefix(Swift.String)
+  case unableToScanHexValue(Swift.String)
+  case mismatchedHexStringLength(Swift.String)
+  case unableToOutputHexStringForWideDisplayColor
+}
+extension UIColorInputError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum ReachabilityError : Swift.Error {
+  case FailedToCreateWithAddress(Darwin.sockaddr_in)
+  case FailedToCreateWithHostname(Swift.String)
+  case UnableToSetCallback
+  case UnableToSetDispatchQueue
+  case UnableToGetInitialFlags
+}
+@available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
+public let ReachabilityChangedNotification: Foundation.NSNotification.Name
+extension NSNotification.Name {
+  public static let reachabilityChanged: Foundation.Notification.Name
+}
+public class Reachability {
+  public typealias NetworkReachable = (UXFeedbackSDK.Reachability) -> ()
+  public typealias NetworkUnreachable = (UXFeedbackSDK.Reachability) -> ()
+  @available(*, unavailable, renamed: "Connection")
+  public enum NetworkStatus : Swift.CustomStringConvertible {
+    case notReachable, reachableViaWiFi, reachableViaWWAN
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: UXFeedbackSDK.Reachability.NetworkStatus, b: UXFeedbackSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public enum Connection : Swift.CustomStringConvertible {
+    case none, wifi, cellular
+    public var description: Swift.String {
+      get
+    }
+    public static func == (a: UXFeedbackSDK.Reachability.Connection, b: UXFeedbackSDK.Reachability.Connection) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+    public func hash(into hasher: inout Swift.Hasher)
+  }
+  public var whenReachable: UXFeedbackSDK.Reachability.NetworkReachable?
+  public var whenUnreachable: UXFeedbackSDK.Reachability.NetworkUnreachable?
+  @available(*, deprecated, renamed: "allowsCellularConnection")
+  final public let reachableOnWWAN: Swift.Bool
+  public var allowsCellularConnection: Swift.Bool
+  public var notificationCenter: Foundation.NotificationCenter
+  @available(*, deprecated, renamed: "connection.description")
+  public var currentReachabilityString: Swift.String {
+    get
+  }
+  @available(*, unavailable, renamed: "connection")
+  public var currentReachabilityStatus: UXFeedbackSDK.Reachability.Connection {
+    get
+  }
+  public var connection: UXFeedbackSDK.Reachability.Connection {
+    get
+  }
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
+  convenience public init?(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
+  convenience public init?(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
+  @objc deinit
+}
+extension Reachability {
+  public func startNotifier() throws
+  public func stopNotifier()
+  @available(*, deprecated, message: "Please use `connection != .none`")
+  public var isReachable: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .cellular`")
+  public var isReachableViaWWAN: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, message: "Please use `connection == .wifi`")
+  public var isReachableViaWiFi: Swift.Bool {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+}
+@available(*, unavailable, renamed: "Connection")
+extension UXFeedbackSDK.Reachability.NetworkStatus : Swift.Equatable {}
+@available(*, unavailable, renamed: "Connection")
+extension UXFeedbackSDK.Reachability.NetworkStatus : Swift.Hashable {}
+extension UXFeedbackSDK.Reachability.Connection : Swift.Equatable {}
+extension UXFeedbackSDK.Reachability.Connection : Swift.Hashable {}
