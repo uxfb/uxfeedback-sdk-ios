@@ -261,28 +261,36 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-@class NSCoder;
 
-SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFError")
-@interface UXFError : NSError
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
-@end
+
+
 
 @class UIFont;
 @class UIImage;
 
-SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFTheme")
-@interface UXFTheme : NSObject
-@property (nonatomic, strong) UIColor * _Nonnull titleColor;
-@property (nonatomic, strong) UIColor * _Nonnull errorColor;
-@property (nonatomic, strong) UIColor * _Nonnull progressColor;
-@property (nonatomic) CGFloat formRadius;
-@property (nonatomic, strong) UIColor * _Nonnull textColor;
-@property (nonatomic, strong) UIColor * _Nonnull inputBackgroundColor;
-@property (nonatomic, strong) UIColor * _Nonnull inputTextColor;
-@property (nonatomic, strong) UIColor * _Nonnull controlColor;
-@property (nonatomic, strong) UIColor * _Nonnull backgroundColor;
+SWIFT_CLASS("_TtC13UXFeedbackSDK9UXFBTheme")
+@interface UXFBTheme : NSObject
+@property (nonatomic, strong) UIColor * _Nonnull text03Color;
+@property (nonatomic, strong) UIColor * _Nonnull inputBorderColor;
+@property (nonatomic, strong) UIColor * _Nonnull iconColor;
+@property (nonatomic, strong) UIColor * _Nonnull btnBgColorActive;
+@property (nonatomic) CGFloat btnBorderRadius;
+@property (nonatomic, strong) UIColor * _Nonnull errorColorSecondary;
+@property (nonatomic, strong) UIColor * _Nonnull errorColorPrimary;
+@property (nonatomic, strong) UIColor * _Nonnull mainColor;
+@property (nonatomic, strong) UIColor * _Nonnull controlBgColorActive;
+@property (nonatomic) CGFloat formBorderRadius;
+@property (nonatomic, strong) UIColor * _Nonnull inputBgColor;
+@property (nonatomic, strong) UIColor * _Nonnull text01Color;
+@property (nonatomic, strong) UIColor * _Nonnull controlBgColor;
+@property (nonatomic, strong) UIColor * _Nonnull controlIconColor;
+@property (nonatomic, strong) UIColor * _Nonnull btnBgColor;
+@property (nonatomic, strong) UIColor * _Nonnull text02Color;
+@property (nonatomic, strong) UIColor * _Nonnull btnTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull bgColor;
+@property (nonatomic, copy) NSString * _Nullable fontRegularName;
+@property (nonatomic, copy) NSString * _Nullable fontMediumName;
+@property (nonatomic, copy) NSString * _Nullable fontBoldName;
 @property (nonatomic, strong) UIFont * _Nonnull regularFont;
 - (UIFont * _Nonnull)regularFontWithSize:(CGFloat)size SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) UIFont * _Nonnull mediumFont;
@@ -295,43 +303,82 @@ SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFTheme")
 - (BOOL)loadFontWithFontUrl:(NSURL * _Nonnull)fontUrl SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC13UXFeedbackSDK11UXFBaseCell")
+@interface UXFBaseCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@protocol UIViewControllerTransitionCoordinator;
 @class NSBundle;
 
-SWIFT_CLASS("_TtC13UXFeedbackSDK17UXFViewController")
-@interface UXFViewController : UIViewController
+SWIFT_CLASS("_TtC13UXFeedbackSDK25UXFCampaignViewController")
+@interface UXFCampaignViewController : UIViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIGestureRecognizer;
+@class UITouch;
+
+@interface UXFCampaignViewController (SWIFT_EXTENSION(UXFeedbackSDK)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldReceiveTouch:(UITouch * _Nonnull)touch SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableView;
+@class UIView;
+
+@interface UXFCampaignViewController (SWIFT_EXTENSION(UXFeedbackSDK)) <UITableViewDataSource, UITableViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFError")
+@interface UXFError : NSError
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
+
 @protocol UXFeedbackCampaignDelegate;
-@protocol UXFeedbackFormDelegate;
 @class UIWindowScene;
 @class UIWindow;
 
 SWIFT_CLASS("_TtC13UXFeedbackSDK10UXFeedback")
 @interface UXFeedback : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UXFeedback * _Nonnull sharedInstance;)
-+ (UXFeedback * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UXFeedback * _Nonnull sharedSDK;)
++ (UXFeedback * _Nonnull)sharedSDK SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) id <UXFeedbackCampaignDelegate> _Nullable delegate;
-@property (nonatomic, strong) id <UXFeedbackFormDelegate> _Nullable formDelegate;
 @property (nonatomic) BOOL debugEnabled;
 @property (nonatomic) BOOL animationEnabled;
 @property (nonatomic) BOOL canDisplayCampaings;
 @property (nonatomic, readonly) BOOL isCampaignsLoaded;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 + (BOOL)isStage SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, strong) UXFViewController * _Nullable currentForm;
+@property (nonatomic, readonly, strong) UXFCampaignViewController * _Nullable currentForm;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (void)setThemeWithTheme:(UXFTheme * _Nonnull)theme;
-- (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
-- (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
-- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setThemeWithTheme:(UXFBTheme * _Nonnull)theme;
+- (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
+- (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
-- (void)loadFeedbackFormWithFormID:(NSString * _Nonnull)formID;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
 @end
 
@@ -343,15 +390,16 @@ SWIFT_PROTOCOL("_TtP13UXFeedbackSDK26UXFeedbackCampaignDelegate_")
 - (void)campaignDidCloseWithFeedbackResult:(UXFeedbackResult * _Nonnull)result isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
 - (void)campaignLoadedWithSuccess:(BOOL)success;
 - (void)campaignErrorReceivedWithErrorString:(NSString * _Nonnull)errorString;
+- (void)campaignDidShow;
 @end
 
 
 SWIFT_PROTOCOL("_TtP13UXFeedbackSDK22UXFeedbackFormDelegate_")
 @protocol UXFeedbackFormDelegate
-- (void)formDidLoadedWithForm:(UXFViewController * _Nonnull)form;
+- (void)formDidLoadedWithForm:(UXFCampaignViewController * _Nonnull)form;
 - (void)formDidFailLoadingWithError:(UXFError * _Nonnull)error;
 - (void)formDidCloseWithFormID:(NSString * _Nullable)formID withFeedbackResults:(NSArray<UXFeedbackResult *> * _Nonnull)results isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
-- (void)formWillCloseWithForm:(UXFViewController * _Nonnull)form formID:(NSString * _Nullable)formID withFeedbackResults:(NSArray<UXFeedbackResult *> * _Nonnull)results isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
+- (void)formWillCloseWithForm:(UXFCampaignViewController * _Nonnull)form formID:(NSString * _Nullable)formID withFeedbackResults:(NSArray<UXFeedbackResult *> * _Nonnull)results isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
 @end
 
 
@@ -630,28 +678,36 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
-@class NSCoder;
 
-SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFError")
-@interface UXFError : NSError
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
-- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
-@end
+
+
 
 @class UIFont;
 @class UIImage;
 
-SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFTheme")
-@interface UXFTheme : NSObject
-@property (nonatomic, strong) UIColor * _Nonnull titleColor;
-@property (nonatomic, strong) UIColor * _Nonnull errorColor;
-@property (nonatomic, strong) UIColor * _Nonnull progressColor;
-@property (nonatomic) CGFloat formRadius;
-@property (nonatomic, strong) UIColor * _Nonnull textColor;
-@property (nonatomic, strong) UIColor * _Nonnull inputBackgroundColor;
-@property (nonatomic, strong) UIColor * _Nonnull inputTextColor;
-@property (nonatomic, strong) UIColor * _Nonnull controlColor;
-@property (nonatomic, strong) UIColor * _Nonnull backgroundColor;
+SWIFT_CLASS("_TtC13UXFeedbackSDK9UXFBTheme")
+@interface UXFBTheme : NSObject
+@property (nonatomic, strong) UIColor * _Nonnull text03Color;
+@property (nonatomic, strong) UIColor * _Nonnull inputBorderColor;
+@property (nonatomic, strong) UIColor * _Nonnull iconColor;
+@property (nonatomic, strong) UIColor * _Nonnull btnBgColorActive;
+@property (nonatomic) CGFloat btnBorderRadius;
+@property (nonatomic, strong) UIColor * _Nonnull errorColorSecondary;
+@property (nonatomic, strong) UIColor * _Nonnull errorColorPrimary;
+@property (nonatomic, strong) UIColor * _Nonnull mainColor;
+@property (nonatomic, strong) UIColor * _Nonnull controlBgColorActive;
+@property (nonatomic) CGFloat formBorderRadius;
+@property (nonatomic, strong) UIColor * _Nonnull inputBgColor;
+@property (nonatomic, strong) UIColor * _Nonnull text01Color;
+@property (nonatomic, strong) UIColor * _Nonnull controlBgColor;
+@property (nonatomic, strong) UIColor * _Nonnull controlIconColor;
+@property (nonatomic, strong) UIColor * _Nonnull btnBgColor;
+@property (nonatomic, strong) UIColor * _Nonnull text02Color;
+@property (nonatomic, strong) UIColor * _Nonnull btnTextColor;
+@property (nonatomic, strong) UIColor * _Nonnull bgColor;
+@property (nonatomic, copy) NSString * _Nullable fontRegularName;
+@property (nonatomic, copy) NSString * _Nullable fontMediumName;
+@property (nonatomic, copy) NSString * _Nullable fontBoldName;
 @property (nonatomic, strong) UIFont * _Nonnull regularFont;
 - (UIFont * _Nonnull)regularFontWithSize:(CGFloat)size SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) UIFont * _Nonnull mediumFont;
@@ -664,43 +720,82 @@ SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFTheme")
 - (BOOL)loadFontWithFontUrl:(NSURL * _Nonnull)fontUrl SWIFT_WARN_UNUSED_RESULT;
 @end
 
+@class NSCoder;
+
+SWIFT_CLASS("_TtC13UXFeedbackSDK11UXFBaseCell")
+@interface UXFBaseCell : UITableViewCell
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@protocol UIViewControllerTransitionCoordinator;
 @class NSBundle;
 
-SWIFT_CLASS("_TtC13UXFeedbackSDK17UXFViewController")
-@interface UXFViewController : UIViewController
+SWIFT_CLASS("_TtC13UXFeedbackSDK25UXFCampaignViewController")
+@interface UXFCampaignViewController : UIViewController
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 - (void)viewDidLoad;
-- (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidLayoutSubviews;
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id <UIViewControllerTransitionCoordinator> _Nonnull)coordinator;
 - (void)dismissViewControllerAnimated:(BOOL)flag completion:(void (^ _Nullable)(void))completion;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIGestureRecognizer;
+@class UITouch;
+
+@interface UXFCampaignViewController (SWIFT_EXTENSION(UXFeedbackSDK)) <UIGestureRecognizerDelegate>
+- (BOOL)gestureRecognizer:(UIGestureRecognizer * _Nonnull)gestureRecognizer shouldReceiveTouch:(UITouch * _Nonnull)touch SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@class UITableView;
+@class UIView;
+
+@interface UXFCampaignViewController (SWIFT_EXTENSION(UXFeedbackSDK)) <UITableViewDataSource, UITableViewDelegate>
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForHeaderInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (UIView * _Nullable)tableView:(UITableView * _Nonnull)tableView viewForFooterInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)numberOfSectionsInTableView:(UITableView * _Nonnull)tableView SWIFT_WARN_UNUSED_RESULT;
+- (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
+- (CGFloat)tableView:(UITableView * _Nonnull)tableView heightForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+- (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
+@end
+
+
+SWIFT_CLASS("_TtC13UXFeedbackSDK8UXFError")
+@interface UXFError : NSError
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain code:(NSInteger)code userInfo:(NSDictionary<NSString *, id> * _Nullable)dict SWIFT_UNAVAILABLE;
+@end
+
 @protocol UXFeedbackCampaignDelegate;
-@protocol UXFeedbackFormDelegate;
 @class UIWindowScene;
 @class UIWindow;
 
 SWIFT_CLASS("_TtC13UXFeedbackSDK10UXFeedback")
 @interface UXFeedback : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UXFeedback * _Nonnull sharedInstance;)
-+ (UXFeedback * _Nonnull)sharedInstance SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) UXFeedback * _Nonnull sharedSDK;)
++ (UXFeedback * _Nonnull)sharedSDK SWIFT_WARN_UNUSED_RESULT;
 @property (nonatomic, strong) id <UXFeedbackCampaignDelegate> _Nullable delegate;
-@property (nonatomic, strong) id <UXFeedbackFormDelegate> _Nullable formDelegate;
 @property (nonatomic) BOOL debugEnabled;
 @property (nonatomic) BOOL animationEnabled;
 @property (nonatomic) BOOL canDisplayCampaings;
 @property (nonatomic, readonly) BOOL isCampaignsLoaded;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 + (BOOL)isStage SWIFT_WARN_UNUSED_RESULT;
-@property (nonatomic, readonly, strong) UXFViewController * _Nullable currentForm;
+@property (nonatomic, readonly, strong) UXFCampaignViewController * _Nullable currentForm;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-- (void)setThemeWithTheme:(UXFTheme * _Nonnull)theme;
-- (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
-- (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
-- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setThemeWithTheme:(UXFBTheme * _Nonnull)theme;
+- (void)setupWithAppID:(NSString * _Nonnull)appID windowScene:(UIWindowScene * _Nonnull)windowScene theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion SWIFT_AVAILABILITY(ios,introduced=13.0);
+- (void)setupWithAppID:(NSString * _Nonnull)appID theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
+- (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
-- (void)loadFeedbackFormWithFormID:(NSString * _Nonnull)formID;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
 @end
 
@@ -712,15 +807,16 @@ SWIFT_PROTOCOL("_TtP13UXFeedbackSDK26UXFeedbackCampaignDelegate_")
 - (void)campaignDidCloseWithFeedbackResult:(UXFeedbackResult * _Nonnull)result isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
 - (void)campaignLoadedWithSuccess:(BOOL)success;
 - (void)campaignErrorReceivedWithErrorString:(NSString * _Nonnull)errorString;
+- (void)campaignDidShow;
 @end
 
 
 SWIFT_PROTOCOL("_TtP13UXFeedbackSDK22UXFeedbackFormDelegate_")
 @protocol UXFeedbackFormDelegate
-- (void)formDidLoadedWithForm:(UXFViewController * _Nonnull)form;
+- (void)formDidLoadedWithForm:(UXFCampaignViewController * _Nonnull)form;
 - (void)formDidFailLoadingWithError:(UXFError * _Nonnull)error;
 - (void)formDidCloseWithFormID:(NSString * _Nullable)formID withFeedbackResults:(NSArray<UXFeedbackResult *> * _Nonnull)results isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
-- (void)formWillCloseWithForm:(UXFViewController * _Nonnull)form formID:(NSString * _Nullable)formID withFeedbackResults:(NSArray<UXFeedbackResult *> * _Nonnull)results isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
+- (void)formWillCloseWithForm:(UXFCampaignViewController * _Nonnull)form formID:(NSString * _Nullable)formID withFeedbackResults:(NSArray<UXFeedbackResult *> * _Nonnull)results isRedirectToAppStoreEnabled:(BOOL)isRedirectToAppStoreEnabled;
 @end
 
 
