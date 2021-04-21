@@ -380,6 +380,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
+- (void)stopCampaign;
 @end
 
 
@@ -797,6 +798,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
+- (void)stopCampaign;
 @end
 
 
@@ -1214,6 +1216,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly) BOOL isStage;)
 - (void)setupWithAppID:(NSString * _Nonnull)appID window:(UIWindow * _Nullable)window theme:(UXFBTheme * _Nullable)theme completion:(void (^ _Nullable)(BOOL))completion;
 - (void)sendEventWithEvent:(NSString * _Nonnull)event fromController:(UIViewController * _Nullable)fromController;
 - (void)resetAllCampaignsDataWithCompletion:(void (^ _Nullable)(void))completion;
+- (void)stopCampaign;
 @end
 
 

@@ -153,6 +153,7 @@ public class LinkedList<T> {
   @objc open func setup(appID: Swift.String, window: UIKit.UIWindow?, theme: UXFeedbackSDK.UXFBTheme? = nil, completion: ((Swift.Bool) -> Swift.Void)? = nil)
   @objc open func sendEvent(event: Swift.String, fromController: UIKit.UIViewController? = nil)
   @objc open func resetAllCampaignsData(completion: (() -> ())?)
+  @objc open func stopCampaign()
   @objc deinit
 }
 public enum UIColorInputError : Swift.Error {
