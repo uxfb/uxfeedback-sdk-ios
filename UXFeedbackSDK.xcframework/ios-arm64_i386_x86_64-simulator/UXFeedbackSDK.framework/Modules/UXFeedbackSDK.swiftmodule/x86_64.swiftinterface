@@ -183,13 +183,13 @@ public class Reachability {
   public typealias NetworkReachable = (UXFeedbackSDK.Reachability) -> ()
   public typealias NetworkUnreachable = (UXFeedbackSDK.Reachability) -> ()
   @available(*, unavailable, renamed: "Connection")
-  public enum NetworkStatus : Swift.CustomStringConvertible {
+  public enum NetworkStatus : Swift.CustomStringConvertible, Swift.Equatable {
     case notReachable, reachableViaWiFi, reachableViaWWAN
     public var description: Swift.String {
       get
     }
-    public static func == (a: UXFeedbackSDK.Reachability.NetworkStatus, b: UXFeedbackSDK.Reachability.NetworkStatus) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: UXFeedbackSDK.Reachability.NetworkStatus, b: UXFeedbackSDK.Reachability.NetworkStatus) -> Swift.Bool
     public var hashValue: Swift.Int {
       get
     }
@@ -248,8 +248,6 @@ extension Reachability {
     get
   }
 }
-@available(*, unavailable, renamed: "Connection")
-extension UXFeedbackSDK.Reachability.NetworkStatus : Swift.Equatable {}
 @available(*, unavailable, renamed: "Connection")
 extension UXFeedbackSDK.Reachability.NetworkStatus : Swift.Hashable {}
 extension UXFeedbackSDK.Reachability.Connection : Swift.Equatable {}
