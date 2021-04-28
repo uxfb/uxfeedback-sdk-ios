@@ -168,11 +168,11 @@ extension UIColorInputError : Foundation.LocalizedError {
   }
 }
 public enum ReachabilityError : Swift.Error {
-  case FailedToCreateWithAddress(Darwin.sockaddr_in)
-  case FailedToCreateWithHostname(Swift.String)
-  case UnableToSetCallback
-  case UnableToSetDispatchQueue
-  case UnableToGetInitialFlags
+  case failedToCreateWithAddress(Darwin.sockaddr, Swift.Int32)
+  case failedToCreateWithHostname(Swift.String, Swift.Int32)
+  case unableToSetCallback(Swift.Int32)
+  case unableToSetDispatchQueue(Swift.Int32)
+  case unableToGetFlags(Swift.Int32)
 }
 @available(*, unavailable, renamed: "Notification.Name.reachabilityChanged")
 public let ReachabilityChangedNotification: Foundation.NSNotification.Name
@@ -195,10 +195,12 @@ public class Reachability {
     }
   }
   public enum Connection : Swift.CustomStringConvertible {
-    case none, wifi, cellular
+    case unavailable, wifi, cellular
     public var description: Swift.String {
       get
     }
+    @available(*, deprecated, renamed: "unavailable")
+    public static let none: UXFeedbackSDK.Reachability.Connection
     public static func == (a: UXFeedbackSDK.Reachability.Connection, b: UXFeedbackSDK.Reachability.Connection) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -222,9 +224,9 @@ public class Reachability {
   public var connection: UXFeedbackSDK.Reachability.Connection {
     get
   }
-  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
-  convenience public init?(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
-  convenience public init?(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil)
+  required public init(reachabilityRef: SystemConfiguration.SCNetworkReachability, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main)
+  convenience public init(hostname: Swift.String, queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
+  convenience public init(queueQoS: Dispatch.DispatchQoS = .default, targetQueue: Dispatch.DispatchQueue? = nil, notificationQueue: Dispatch.DispatchQueue? = .main) throws
   @objc deinit
 }
 extension Reachability {
