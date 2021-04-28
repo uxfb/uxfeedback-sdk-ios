@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		5HZR3V+hjbwq8YqIlCvHkulOsAk=
+		uKy1UvNlNjS1uzB0eOVxsKHVn1Q=
 		</data>
 		<key>Headers/UXFeedbackSDK-Swift.h</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		uj+iOKbunaq4LkEVUhJlQWVIwbA=
+		tx14DeljJC5yuofKKEqxxOnYq94=
 		</data>
 		<key>Modules/UXFeedbackSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -110,67 +110,67 @@
 		</data>
 		<key>UXFButtonCell.nib</key>
 		<data>
-		XG2FKozwhmgfowTLVpGN3QoLiQE=
+		NQA7EDVFOPixVxsg3kKdL1hTzz0=
 		</data>
 		<key>UXFCampaignViewController.nib/objects-11.0+.nib</key>
 		<data>
-		2loWl5l2dd5C0iy81yrpHL+WkPg=
+		MWKYxwITnotEQD7DdQzuGjkU3fA=
 		</data>
 		<key>UXFCampaignViewController.nib/runtime.nib</key>
 		<data>
-		F6RsDW/KjRugs78M9Dhy3iKqWaQ=
+		TLQC4cAcbLae0samsdCP6MZnsqg=
 		</data>
 		<key>UXFCheckCell.nib</key>
 		<data>
-		c+bIZDdhYZpTGfDWrXdG9tBnlcM=
+		jRdoafNll/291UrYqqpuYk3KOlU=
 		</data>
 		<key>UXFCheckboxCell.nib/objects-11.0+.nib</key>
 		<data>
-		gIMeOzbxX/hA6cSoE3Y66W4hNoE=
+		NbXyW+QS9mlQsB1mUDRw6oo4LlQ=
 		</data>
 		<key>UXFCheckboxCell.nib/runtime.nib</key>
 		<data>
-		Ffo0V8XkWSdP4g5+VLl2uJ/Df9M=
+		fLT0VhSYwaVJp5kOzphqLdtojRw=
 		</data>
 		<key>UXFEmailCell.nib</key>
 		<data>
-		EtSY5NOucoS71YsUUsSYKkSKbJo=
+		EayMgQRzU+pEJ5JZRA5+rfjkXxU=
 		</data>
 		<key>UXFHeaderCell.nib</key>
 		<data>
-		EamAUUU+rrDMMZbaixfmD97TvlU=
+		LJWem3Xg+aTcl1kNQv7/0lBiWJE=
 		</data>
 		<key>UXFImageCell.nib</key>
 		<data>
-		fs2ypOdbnNmREOYRfuNAMD+6TwU=
+		+QsLvCwM/59H8yNhIpDnL+sYcpA=
 		</data>
 		<key>UXFInputCell.nib</key>
 		<data>
-		oRy4hQFc3m7M6OMTnT5pOZV+hFo=
+		okZNeQHn0LSoemZ5GVqdtwKRxco=
 		</data>
 		<key>UXFRadioCell.nib</key>
 		<data>
-		QjofPsi58lCQCLeEIL4zhsro5oU=
+		5txJ0JNFFVlG+evrdUQFWI9s5mk=
 		</data>
 		<key>UXFRadiobuttonCell.nib/objects-11.0+.nib</key>
 		<data>
-		EmPnNPa+euqcDIQMFIPcBMZAv/U=
+		vg8Z+MyzqReUhyV05uHSwpXfodA=
 		</data>
 		<key>UXFRadiobuttonCell.nib/runtime.nib</key>
 		<data>
-		WMyyUY2A+NJYVfJKD1ZNCo7adVQ=
+		ZiFXuvn9zoCzjnExFnGUAhnC/UA=
 		</data>
 		<key>UXFSmilesCell.nib</key>
 		<data>
-		UbswT6vH1yxEXjtNx92fgNX51yc=
+		eC8Xdo9o52wzbKVoenuiOCyFQSI=
 		</data>
 		<key>UXFStarsCell.nib</key>
 		<data>
-		2d1f5GBtn1TVIE548UYyUFV1X3I=
+		/DSxv6ADjl/GFXS45pBV0eg0vEA=
 		</data>
 		<key>UXFTextCell.nib</key>
 		<data>
-		pY5YVzzhypTrFKIFl/OfWK1YaXI=
+		s2ReF2BPGH5Pgu2qvYlKlQUQCMk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -179,11 +179,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			5HZR3V+hjbwq8YqIlCvHkulOsAk=
+			uKy1UvNlNjS1uzB0eOVxsKHVn1Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			pHMJeeeKZBLRm6kJ2EdDWF9XXYD8pVHenszKbfSoACQ=
+			/h8ijRSyJyoqrmunrdwpKtTluJaDJQEhdxYM/qzPJwk=
 			</data>
 		</dict>
 		<key>Headers/UXFeedbackSDK-Swift.h</key>
@@ -454,176 +454,176 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XG2FKozwhmgfowTLVpGN3QoLiQE=
+			NQA7EDVFOPixVxsg3kKdL1hTzz0=
 			</data>
 			<key>hash2</key>
 			<data>
-			nPR5Ct5LWWp1YKLpTBdNdlYQqEJUnvW9iuGOGO/NWyM=
+			ebGA4+WSlbzV5TKIDswasPnqTIv56JGvcDk7/qxH20g=
 			</data>
 		</dict>
 		<key>UXFCampaignViewController.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2loWl5l2dd5C0iy81yrpHL+WkPg=
+			MWKYxwITnotEQD7DdQzuGjkU3fA=
 			</data>
 			<key>hash2</key>
 			<data>
-			GVtWmSM2k+IC1huEdSSbz7p1GyhiVWOxScTyB10pa3w=
+			dfkL8bzLZ3puxpJ2kTa3CQRc/+oHZmOQDzN9/Rrp/fo=
 			</data>
 		</dict>
 		<key>UXFCampaignViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			F6RsDW/KjRugs78M9Dhy3iKqWaQ=
+			TLQC4cAcbLae0samsdCP6MZnsqg=
 			</data>
 			<key>hash2</key>
 			<data>
-			uusjS+ncqMCFX3dNI5DE0FbA+8ryxjKJ9iN6Fpk+w+E=
+			DZtb7QPayNjJ/nfeP2eFDFnvYLGlr773GbkMOyWiuTE=
 			</data>
 		</dict>
 		<key>UXFCheckCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			c+bIZDdhYZpTGfDWrXdG9tBnlcM=
+			jRdoafNll/291UrYqqpuYk3KOlU=
 			</data>
 			<key>hash2</key>
 			<data>
-			mDc5iwfzZqnOQ2Ygui+naVTBryNBbYwtLcV9BgdpZcY=
+			a5IenxQhOSgh+ETHyTcZBTT+lOU1C9lQ6nLQiehHRwQ=
 			</data>
 		</dict>
 		<key>UXFCheckboxCell.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			gIMeOzbxX/hA6cSoE3Y66W4hNoE=
+			NbXyW+QS9mlQsB1mUDRw6oo4LlQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			ThGbfVnMIxN5fm3sizBRp90dXWKEKs4/bO1pCoqImVo=
+			j3E2oqHVlSINFl/yLA1lRmsaj0tirmPNBgXtXok3sPY=
 			</data>
 		</dict>
 		<key>UXFCheckboxCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Ffo0V8XkWSdP4g5+VLl2uJ/Df9M=
+			fLT0VhSYwaVJp5kOzphqLdtojRw=
 			</data>
 			<key>hash2</key>
 			<data>
-			ARUhdLUC0JfhwRvXeK1OU/n6LdhcE+FLbhftLsnjiV8=
+			tu9FSAu2Yprh4Ewwqi+5OPGy0qQGCLcc2wsGI5zSIAo=
 			</data>
 		</dict>
 		<key>UXFEmailCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EtSY5NOucoS71YsUUsSYKkSKbJo=
+			EayMgQRzU+pEJ5JZRA5+rfjkXxU=
 			</data>
 			<key>hash2</key>
 			<data>
-			ErWdizVrva0rTr2ILpOIOnplyKIVN3k8I3DJpPsEsrI=
+			aJ09Ia4VbNDk5mgkAFCoPxxyzaWa07gtPJwFcN0aFiA=
 			</data>
 		</dict>
 		<key>UXFHeaderCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EamAUUU+rrDMMZbaixfmD97TvlU=
+			LJWem3Xg+aTcl1kNQv7/0lBiWJE=
 			</data>
 			<key>hash2</key>
 			<data>
-			nIPotcHqcmfibSccyKZYA5l9OJnIqw9LDjGoVnOvJa4=
+			rFMdwkYmtDrKUNA9z7lx8Wvi2hxMjGS4xE7tTKLUCIU=
 			</data>
 		</dict>
 		<key>UXFImageCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			fs2ypOdbnNmREOYRfuNAMD+6TwU=
+			+QsLvCwM/59H8yNhIpDnL+sYcpA=
 			</data>
 			<key>hash2</key>
 			<data>
-			Rv9KaBVMNfyVCviRxjLVhAjaib46Jwgpk3MUDkAzl7A=
+			s2wueCQTIIXhI4rmP6g6ell7wetP/Hs+sp1vHTqu4CQ=
 			</data>
 		</dict>
 		<key>UXFInputCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			oRy4hQFc3m7M6OMTnT5pOZV+hFo=
+			okZNeQHn0LSoemZ5GVqdtwKRxco=
 			</data>
 			<key>hash2</key>
 			<data>
-			4vP/t3X+5do6N2gmmX+9wws0EPIfKkOXRnSiX6u+kSs=
+			9d3fC5MtI4s+dxZ9dtTfZoCkFT1mReVPTPVMsfJgRQ8=
 			</data>
 		</dict>
 		<key>UXFRadioCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			QjofPsi58lCQCLeEIL4zhsro5oU=
+			5txJ0JNFFVlG+evrdUQFWI9s5mk=
 			</data>
 			<key>hash2</key>
 			<data>
-			8Y79C/X8htF9sEeJITbau76aeKgztVP0W2iYML1QuZk=
+			v2QB2DGr9VU/XS22X86uOljpeUpR8seO6X50wdTS9vE=
 			</data>
 		</dict>
 		<key>UXFRadiobuttonCell.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			EmPnNPa+euqcDIQMFIPcBMZAv/U=
+			vg8Z+MyzqReUhyV05uHSwpXfodA=
 			</data>
 			<key>hash2</key>
 			<data>
-			8zKG/MmGqetT0X6lI7+y4C2VHb2g+tQZPqQ1rmtKo1c=
+			ZLqFfNuaBktg21w6oO7QShmiJHIKfXH3X0IX+6/5674=
 			</data>
 		</dict>
 		<key>UXFRadiobuttonCell.nib/runtime.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			WMyyUY2A+NJYVfJKD1ZNCo7adVQ=
+			ZiFXuvn9zoCzjnExFnGUAhnC/UA=
 			</data>
 			<key>hash2</key>
 			<data>
-			8CUgslyTzn5Gnx8AzBYudmDOT6LugeiBbRZqdKo62K8=
+			CXSvpj7dy5627ml5fmLonG6fONOj2Zr06GoDDA5zllc=
 			</data>
 		</dict>
 		<key>UXFSmilesCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			UbswT6vH1yxEXjtNx92fgNX51yc=
+			eC8Xdo9o52wzbKVoenuiOCyFQSI=
 			</data>
 			<key>hash2</key>
 			<data>
-			CxEzAm7MrXwrXImlmOnDaokzsEw///HKQ2JZ8ExwHOM=
+			4ElFMmrWMdwy6EOIc/NLsreRIVbJFim13x5E4jxAcTw=
 			</data>
 		</dict>
 		<key>UXFStarsCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			2d1f5GBtn1TVIE548UYyUFV1X3I=
+			/DSxv6ADjl/GFXS45pBV0eg0vEA=
 			</data>
 			<key>hash2</key>
 			<data>
-			xYFT6pf3Nj2BKXZFe6eZs6V9RUoy08gTl42MOHwTnKw=
+			errYOkjXQFAdOmABvy7sfwTOezw8bX/Rj3tBnCRNBk4=
 			</data>
 		</dict>
 		<key>UXFTextCell.nib</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pY5YVzzhypTrFKIFl/OfWK1YaXI=
+			s2ReF2BPGH5Pgu2qvYlKlQUQCMk=
 			</data>
 			<key>hash2</key>
 			<data>
-			3EHgrJX4eBBAvrXP16CerN2XE1Ft08/Nk4j9+472I8A=
+			qvaPmX881aowNcuwLdZ8mOyBEKaw7Zx5ZuL9235b3EU=
 			</data>
 		</dict>
 	</dict>
