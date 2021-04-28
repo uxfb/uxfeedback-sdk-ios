@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
 // swift-module-flags: -target x86_64-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name UXFeedbackSDK
 import CoreTelephony
 import Foundation
@@ -13,16 +13,16 @@ import UIKit
   public var rating: Swift.Int?
   public var abandonedPageIndex: Swift.Int?
   @objc public var sent: Swift.Bool
-  @objc deinit
   @objc override dynamic public init()
+  @objc deinit
 }
-@objc public protocol UXFeedbackCampaignDelegate : AnyObject {
+@objc public protocol UXFeedbackCampaignDelegate {
   @objc func campaignDidClose(withFeedbackResult result: UXFeedbackSDK.UXFeedbackResult, isRedirectToAppStoreEnabled: Swift.Bool)
   @objc func campaignLoaded(success: Swift.Bool)
   @objc func campaignErrorReceived(errorString: Swift.String)
   @objc func campaignDidShow()
 }
-@objc public protocol UXFeedbackFormDelegate : AnyObject {
+@objc public protocol UXFeedbackFormDelegate {
   @objc func formDidLoaded(form: UXFeedbackSDK.UXFCampaignViewController)
   @objc func formDidFailLoading(error: UXFeedbackSDK.UXFError)
   @objc func formDidClose(formID: Swift.String?, withFeedbackResults results: [UXFeedbackSDK.UXFeedbackResult], isRedirectToAppStoreEnabled: Swift.Bool)
@@ -46,9 +46,9 @@ extension String {
   @objc override dynamic open func viewDidLayoutSubviews()
   @objc override dynamic open func viewWillTransition(to size: CoreGraphics.CGSize, with coordinator: UIKit.UIViewControllerTransitionCoordinator)
   @objc override dynamic open func dismiss(animated flag: Swift.Bool, completion: (() -> Swift.Void)? = nil)
-  @objc deinit
   @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
   @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
 }
 extension UXFCampaignViewController : UIKit.UIGestureRecognizerDelegate {
   @objc dynamic public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
@@ -189,10 +189,10 @@ public class Reachability {
       get
     }
     public static func == (a: UXFeedbackSDK.Reachability.NetworkStatus, b: UXFeedbackSDK.Reachability.NetworkStatus) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public enum Connection : Swift.CustomStringConvertible {
     case none, wifi, cellular
@@ -200,10 +200,10 @@ public class Reachability {
       get
     }
     public static func == (a: UXFeedbackSDK.Reachability.Connection, b: UXFeedbackSDK.Reachability.Connection) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
       get
     }
-    public func hash(into hasher: inout Swift.Hasher)
   }
   public var whenReachable: UXFeedbackSDK.Reachability.NetworkReachable?
   public var whenUnreachable: UXFeedbackSDK.Reachability.NetworkUnreachable?
