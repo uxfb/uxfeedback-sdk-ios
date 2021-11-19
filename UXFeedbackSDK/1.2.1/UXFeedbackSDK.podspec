@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.license       = "Apache License, Version 2.0"
   s.author        = { "Team SDK" => "info@uxfeedback.ru" }
   s.platform      = :ios, "10.0"
-  s.swift_version = "5.4"
+  s.swift_version = "5.5"
   tagName = "v1.2.1"
   s.source        = { :git => "https://github.com/uxfb/uxfeedback-sdk-ios.git", :tag => tagName }
   s.ios.vendored_frameworks = 'UXFeedbackSDK.xcframework'
