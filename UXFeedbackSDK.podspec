@@ -13,4 +13,6 @@ Pod::Spec.new do |s|
   s.source        = { :git => "https://github.com/uxfb/uxfeedback-sdk-ios.git", :tag => tagName }
   s.ios.vendored_frameworks = 'UXFeedbackSDK.xcframework'
   s.frameworks = "Foundation", "UIKit", "SystemConfiguration", "CoreTelephony"
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
