@@ -1,0 +1,11 @@
+framework module UXFeedbackSDK {
+  umbrella header "UXFeedbackSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module UXFeedbackSDK.Swift {
+  header "UXFeedbackSDK-Swift.h"
+  requires objc
+}
