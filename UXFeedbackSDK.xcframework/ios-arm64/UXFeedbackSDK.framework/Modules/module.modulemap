@@ -6,6 +6,6 @@ framework module UXFeedbackSDK {
 }
 
 module UXFeedbackSDK.Swift {
-    header "UXFeedbackSDK-Swift.h"
-    requires objc
+  header "UXFeedbackSDK-Swift.h"
+  requires objc
 }
