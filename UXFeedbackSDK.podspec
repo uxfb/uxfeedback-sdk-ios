@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name          = "UXFeedbackSDK"
-  s.version       = "1.6.5"
+  s.version       = "1.6.6"
   s.summary       = "Collect feedback from your users"
   s.description   = "With UXFeedbackSDK you can collect feedback from your users"
   s.homepage      = "https://github.com/uxfb/uxfeedback-sdk-ios"
